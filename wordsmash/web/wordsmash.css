@@ -1,3 +1,4 @@
+
 body {
   background-color: #F8F8F8;
   font-family: 'Open Sans', sans-serif;
@@ -19,13 +20,8 @@ h1, p {
   background-color: #fff;
 }
 
-#click_counter {
+#sample_text_id {
   font-size: 24pt;
   text-align: center;
   margin-top: 140px;
-}
-
-#click_counter button {
-  font-size: 24pt;
-  margin-bottom: 20px;
 }

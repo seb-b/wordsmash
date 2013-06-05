@@ -1,14 +1,16 @@
 import 'dart:html';
-import 'package:web_ui/web_ui.dart';
 
-// initial value for click-counter
-int startingCount = 5;
-
-/**
- * Learn about the Web UI package by visiting
- * http://www.dartlang.org/articles/dart-web-components/.
- */
 void main() {
-  // Enable this to use Shadow DOM in the browser.
-  //useShadowDom = true;
+  query("#sample_text_id")
+    ..text = "Click me!"
+    ..onClick.listen(reverseText);
+}
+
+void reverseText(MouseEvent event) {
+  var text = query("#sample_text_id").text;
+  var buffer = new StringBuffer();
+  for (int i = text.length - 1; i >= 0; i--) {
+    buffer.write(text[i]);
+  }
+  query("#sample_text_id").text = buffer.toString();
 }

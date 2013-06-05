@@ -1,6 +1,4 @@
 name: wordsmash
-description: A sample WebUI application
+description: A sample web application
 dependencies:
   browser: any
-  js: any
-  web_ui: any
