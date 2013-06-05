@@ -1,0 +1,7 @@
+---
+build.dart --machine --changed=pubspec.yaml --changed=web\wordsmash.css --changed=web\wordsmash.dart --changed=...
+Total time spent on web/wordsmash.html                       -- 288 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 306 ms
+build.dart finished [472 ms]
+
