@@ -4,6 +4,8 @@ import 'dart:json';
 
 @observable
 String word = "help";
+@observable
+String sentence;
 
 void main() {
   getWord();
@@ -37,4 +39,15 @@ void loadWordDefinition(String word) {
 void onDataLoaded(String response) {
   Map data = parse(response);
   print(data["results"][4]["senses"][0]["definition"]);
+}
+
+void newPage()
+{
+  if(sentence != null && sentence.indexOf(word) != -1)
+  {
+    query("#new-page-message").text = "All gucci";
+  }else
+  {
+    query("#new-page-message").text = "You didn't use your word, dingus";
+  }
 }

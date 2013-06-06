@@ -14,11 +14,11 @@
     <button on-click="getWord()" id="get-word">new word</button>
     </div>
     
-    
-   <textarea placeholder="Write sentence here"> </textarea>
+   <br/>
+   <textarea placeholder="Write sentence here" bind-value="sentence" > </textarea>
    
-   <button>New Page</button>
-       
+   <button on-click="newPage()">New Page</button>
+    <span id="new-page-message"></span>   
    
    
     <script type="application/dart" src="wordsmash.dart"></script>
