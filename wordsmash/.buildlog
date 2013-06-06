@@ -3058,3 +3058,109 @@ Total time spent on web/wordsmash.html                       -- 376 ms
 Total time                                                   -- 400 ms
 build.dart finished [587 ms]
 
+---
+build.dart --machine --changed=web\wordsmash.html
+Total time spent on web/wordsmash.html                       -- 372 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 391 ms
+build.dart finished [586 ms]
+
+---
+build.dart --machine --changed=web\index.html
+Total time spent on web/wordsmash.html                       -- 410 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 438 ms
+build.dart finished [653 ms]
+
+---
+build.dart --machine --changed=web\index.html
+Total time spent on web/wordsmash.html                       -- 370 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 389 ms
+build.dart finished [581 ms]
+
+---
+build.dart --machine --changed=web\index.html
+Total time spent on web/wordsmash.html                       -- 384 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 403 ms
+build.dart finished [580 ms]
+
+---
+build.dart --machine --changed=web\index.html
+Total time spent on web/wordsmash.html                       -- 376 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 404 ms
+build.dart finished [591 ms]
+
+---
+build.dart --machine --changed=web\index.html
+Total time spent on web/wordsmash.html                       -- 391 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 412 ms
+build.dart finished [605 ms]
+
+---
+build.dart --machine --changed=web\index.html
+Total time spent on web/wordsmash.html                       -- 388 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 407 ms
+build.dart finished [574 ms]
+
+---
+build.dart --machine --changed=web\sentence.dart --removed=web\wordsmash.dart
+[{"method":"error","params":{"file":"web/wordsmash.html","message":"unable to open file \"web\\wordsmash.dart\"","line":32,"charStart":873,"charEnd":926}}]
+Total time spent on web/wordsmash.html                       -- 122 ms
+Total time                                                   -- 140 ms
+build.dart finished [309 ms]
+
+---
+build.dart --machine --changed=web\sentence.html --removed=web\wordsmash.html
+error unable to open file "web/wordsmash.html"
+Total time spent on web/wordsmash.html                       --  18 ms
+Total time                                                   --  35 ms
+build.dart finished [246 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error unable to open file "web/wordsmash.html"
+Total time spent on web/wordsmash.html                       --  18 ms
+Total time                                                   --  39 ms
+build.dart finished [249 ms]
+
+---
+build.dart --machine --changed=web\sentence.html
+error unable to open file "web/wordsmash.html"
+Total time spent on web/wordsmash.html                       --  19 ms
+Total time                                                   --  40 ms
+build.dart finished [259 ms]
+
+---
+build.dart --machine --clean
+Total time                                                   --  13 ms
+build.dart finished [214 ms]
+
+---
+build.dart --machine --full
+Total time spent on web/sentence.html                        -- 356 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+[{"method":"warning","params":{"file":"web/index.html","message":"End tag (a) violates step 1, paragraph 1 of the adoption agency algorithm.","line":10,"charStart":147,"charEnd":151}}]
+Total time spent on web/index.html                           --  29 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+Total time                                                   -- 415 ms
+build.dart finished [599 ms]
+
+---
+build.dart --machine --changed=pubspec.lock
+Total time                                                   --  16 ms
+build.dart finished [198 ms]
+
+---
+build.dart --machine --changed=web\index.html
+Total time spent on web/sentence.html                        -- 394 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  27 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+Total time                                                   -- 439 ms
+build.dart finished [631 ms]
+
