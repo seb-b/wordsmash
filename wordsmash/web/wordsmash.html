@@ -9,13 +9,17 @@
   <body>
     <h1>Wordsmash</h1>
     
-    <p>Hello world from Dart!</p>
+    <div id="players-word"> 
+    <p>Your word is: {{word}}</p>
+    <button on-click="getWord()" id="get-word">new word</button>
+    </div>
     
-    <textarea id="story" bind-value="story"> </textarea>
-      
+    
+   <textarea placeholder="Write sentence here"> </textarea>
+   
+   <button>New Page</button>
        
-    <button on-click="getWord()" id="get-word">Get word</button>
-    <div>{{word}}</div>
+   
    
     <script type="application/dart" src="wordsmash.dart"></script>
     <script src="packages/browser/dart.js"></script>
