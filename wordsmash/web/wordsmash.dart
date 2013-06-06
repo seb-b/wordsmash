@@ -2,6 +2,7 @@ import 'dart:html';
 import 'package:web_ui/web_ui.dart';
 import 'dart:json';
 import 'package:js/js.dart' as js;
+import 'dart:math';
 
 @observable
 String displayWord = "loading";
@@ -82,6 +83,7 @@ void onDataLoaded(String response) {
       var senses = firstResult["senses"];
       definition = senses[0]["definition"];
       displayWord = word;
+      print("found a def for: " + word);
     if(definition == null)
     {
       getWord();
@@ -107,11 +109,11 @@ void newPage()
 
 void getGoogleImage()
 { 
-
+  query("#google-pic").src = "resources/images/loading.gif";
   js.context.handler = new js.Callback.once(display);  
   
   var script = new ScriptElement();
-  script.src = "http://ajax.googleapis.com/ajax/services/search/images?v=1.0&rsz=1&q="+word+"&callback=handler";
+  script.src = "http://ajax.googleapis.com/ajax/services/search/images?v=1.0&rsz=8&q="+word+"&callback=handler";
   document.body.nodes.add(script);
 }
 
@@ -119,7 +121,9 @@ void display(var data)
 {
   var response = data.responseData;
   var results = response.results;
-  var firstResult = results[0];
+  var rng = new Random();
+  int index = rng.nextInt(results.length);
+  var firstResult = results[index];
   var picUrl = firstResult.unescapedUrl;
   query("#google-pic").src = picUrl;
 }
@@ -136,6 +140,7 @@ void save()
  getWord();
  sentence = null;
  definition = "loading";
+ 
 }
 
 void previousPage()
@@ -153,5 +158,6 @@ void previousPage()
   definition = definitions[index];
   definitions.removeAt(index);
   newWord = false;
+  query("#google-pic").src = "";
 }
 

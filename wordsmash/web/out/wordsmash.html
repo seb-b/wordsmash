@@ -6,24 +6,28 @@
     <link rel="stylesheet" href="../wordsmash.css">
   </head>
   <body>
+  <div id="container">
     <h1>Wordsmash</h1>
     
-    <div id="players-word"> 
-    <p></p> <p></p>
+    <span id="players-word"> 
+    <p></p> 
     <button id="get-word">new word</button>
-    </div>
-    
+    <p class="page-number"></p>
+    </span>
+     <div id="word-definition"></div>
    <br>
-   <textarea placeholder="Write sentence here"> </textarea>
    <button>Redo last page</button>
+   <textarea placeholder="Write sentence here" id="sentence-textarea"> </textarea>
    <button>New Page</button>
     <span id="new-page-message"></span>   
 
-    <div id="word-definition"></div>
+   
     
     <button id="get-image">Get an image</button>
-
+  <br>
    <img id="google-pic">
+   </div>
+   
     
     <script src="../packages/browser/dart.js"></script>
   

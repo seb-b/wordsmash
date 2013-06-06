@@ -7,24 +7,28 @@
     <link rel="stylesheet" href="wordsmash.css">
   </head>
   <body>
+  <div id="container">
     <h1>Wordsmash</h1>
     
-    <div id="players-word"> 
-    <p>Your word is: {{displayWord}}</p> <p>page {{pageNumber}}</p>
+    <span id="players-word"> 
+    <p>Your word is: {{displayWord}}</p> 
     <button on-click="getWord()" id="get-word">new word</button>
-    </div>
-    
+    <p class="page-number">page {{pageNumber}}</p>
+    </span>
+     <div id="word-definition">{{definition}}</div>
    <br/>
-   <textarea placeholder="Write sentence here" bind-value="sentence" > </textarea>
    <button on-click="previousPage()">Redo last page</button>
+   <textarea placeholder="Write sentence here" bind-value="sentence" id="sentence-textarea" > </textarea>
    <button on-click="newPage()">New Page</button>
     <span id="new-page-message"></span>   
 
-    <div id="word-definition">{{definition}}</div>
+   
     
     <button id="get-image" on-click="getGoogleImage()">Get an image</button>
-
+  <br/>
    <img id="google-pic" />
+   </div>
+   
     <script type="application/dart" src="wordsmash.dart"></script>
     <script src="packages/browser/dart.js"></script>
   </body>

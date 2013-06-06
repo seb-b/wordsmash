@@ -11,3 +11,26 @@ body {
 h1, p {
   color: #333;
 }
+
+#container{
+  width: 800px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+#players-word *{
+  width: auto;
+  margin: 0px 0px;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+#players-word p.page-number{
+  float: right;
+ }
+
+#sentence-textarea{
+ width: 75%;
+ height: 75px; 
+}
