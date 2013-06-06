@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wordsmash</title>
+    <link rel="stylesheet" href="wordsmash.css">
+  </head>
+  <body>
+  <div id="container">
+    <h1>Wordsmash</h1>
+    
+    <span id="players-word"> 
+    <p class="page-number">page {{pageNumber}}</p>
+    </span>
+   <br/>
+   <button on-click="previousPage()">Redo last page</button>
+   <p id="sentence">Sentence will go here</p>
+   <button on-click="newPage()">New Page</button>
+    <span id="new-page-message"></span> <br>  
+
+   
+    
+    <button id="get-image" on-click="getGoogleImage()">Get an image</button>
+  <br/>
+   <img id="google-pic" />
+   </div>
+   
+    <script type="application/dart" src="pick.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>
