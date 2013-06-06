@@ -177,3 +177,40 @@ Total time spent on web/wordsmash.html                       -- 238 ms
 Total time                                                   -- 256 ms
 build.dart finished [422 ms]
 
+---
+build.dart --machine --changed=web\wordsmash.html
+[{"method":"warning","params":{"file":"web/wordsmash.html","message":"End tag (div) seen too early. Expected other end tag.","line":20,"charStart":342,"charEnd":348}}]
+Total time spent on web/wordsmash.html                       -- 219 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 236 ms
+build.dart finished [404 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.html
+[{"method":"warning","params":{"file":"web/wordsmash.html","message":"End tag (div) seen too early. Expected other end tag.","line":20,"charStart":375,"charEnd":381}}]
+Total time spent on web/wordsmash.html                       -- 222 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 240 ms
+build.dart finished [409 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.html
+Total time spent on web/wordsmash.html                       -- 236 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 255 ms
+build.dart finished [431 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 225 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 245 ms
+build.dart finished [419 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 234 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 252 ms
+build.dart finished [425 ms]
+

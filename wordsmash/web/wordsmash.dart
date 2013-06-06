@@ -4,6 +4,8 @@ import 'dart:json';
 
 @observable
 String word = "help";
+@observable
+String story;
 
 void main() {
 
