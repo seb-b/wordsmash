@@ -93,16 +93,29 @@ void loadWordDefinition(String word) {
 
 void onDataLoaded(String response) {
   Map data = parse(response);
-  if(data["results"] == 0)
+  print(data["count"]);
+  if(data["count"] == 0)
   {
     print("Word not found");
-    getWord();
-    
+    getWord();  
   }
   
   else
   {
-    definition = data["results"][4]["senses"][0]["definition"].toString();
+    try{
+    print(data);
+    List results = data["results"];
+    print(results[0]);
+    var firstResult = results[0];
+    var senses = firstResult["senses"];
+    definition = senses[0]["definition"];
+    } catch(e)
+    {
+      getWord();
+    }
+    //Map senses = results.get("definition");
+    //definition = senses["definition"];
+    
   }
 }
 void newPage()
