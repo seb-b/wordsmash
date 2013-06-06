@@ -80,7 +80,6 @@ List words = new List();
 List definitions = new List();
 bool newWord = true;
 
-
 void main() {
   getWord();
 }
@@ -120,7 +119,15 @@ void onDataLoaded(String response) {
   if(data["count"] == 0)
   {
     print("Word not found: " + word);
-    getWord();  
+    int lastIndex = word.lastIndexOf("s");
+    if(lastIndex != -1 && lastIndex == word.length -1)
+    {
+      word = word.substring(0, word.length -1);
+      loadWordDefinition(word);
+    }else
+    {
+      getWord(); 
+    }
   }
   
   else
@@ -154,18 +161,6 @@ void newPage()
   }
 }
 
-void getGoogleImage(String query, int numResults )
-{
-  var url = "http://ajax.googleapis.com/ajax/services/search/images?v=1.0&rsz="+numResults.toString()+"&q="+query;
-  var request = HttpRequest.getString(url).then(processSearchResponse);
-}
-
-void processSearchResponse(String response)
-{
-  Map data = parse(response);
-  print(data);
-}
-
 void save()
 {
  sentences.add(sentence);
@@ -191,7 +186,6 @@ void previousPage()
   definitions.removeAt(index);
   newWord = false;
 }
-
 
 
 // Additional generated code
