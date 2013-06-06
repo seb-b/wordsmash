@@ -10,6 +10,7 @@ String sentence;
 String definition;
 
 
+
 void main() {
   getWord();
 }
@@ -77,3 +78,18 @@ void newPage()
     query("#new-page-message").text = "You didn't use your word, dingus";
   }
 }
+
+void getGoogleImage(String query, int numResults )
+{
+  var url = "http://ajax.googleapis.com/ajax/services/search/images?v=1.0&rsz="+numResults.toString()+"&q="+query;
+  var request = HttpRequest.getString(url).then(processSearchResponse);
+}
+
+void processSearchResponse(String response)
+{
+  Map data = parse(response);
+  print(data);
+}
+
+
+
