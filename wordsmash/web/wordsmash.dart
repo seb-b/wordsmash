@@ -1,17 +1,18 @@
 import 'dart:html';
+import 'dart:json';
 
 void main() {
-  query("#sample_text_id")
-    ..text = "Click me!"
-    ..onClick.listen(reverseText);
+ loadWordDefinition("pig");
 }
 
-void reverseText(MouseEvent event) {
-  var text = query("#sample_text_id").text;
-  var buffer = new StringBuffer();
-  for (int i = text.length - 1; i >= 0; i--) {
-    buffer.write(text[i]);
-  }
-  query("#sample_text_id").text = buffer.toString();
+void loadWordDefinition(String word) {
+  var url = "http://api.pearson.com/v2/dictionaries/entries?headword="+word+"&apikey=9b7305c0523c3902ec01b44e5a5c53ad";
+
+  // call the web server asynchronously
+  var request = HttpRequest.getString(url).then(onDataLoaded);
 }
-//comment
+
+void onDataLoaded(String response) {
+  Map data = parse(response);
+  print(data["results"][4]["senses"][0]["definition"]);
+}
