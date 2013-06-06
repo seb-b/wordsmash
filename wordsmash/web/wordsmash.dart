@@ -3,6 +3,8 @@ import 'package:web_ui/web_ui.dart';
 import 'dart:json';
 
 @observable
+String displayWord = "loading";
+
 String word;
 @observable
 String sentence;
@@ -25,8 +27,10 @@ void getWord()
 {
   if(newWord)
   {
-  String url = "http://api.wordnik.com/v4/words.json/randomWord?hasDictionaryDef=false&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&api_key=9426b5f9c67e03853f5410a188e06bc4136900201e3fd92eb";
-  var request = HttpRequest.getString(url).then(response);
+    displayWord = "loading";
+    definition = "loading";
+    String url = "http://api.wordnik.com/v4/words.json/randomWord?hasDictionaryDef=false&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&api_key=9426b5f9c67e03853f5410a188e06bc4136900201e3fd92eb";
+    var request = HttpRequest.getString(url).then(response);
   }
   newWord = true;
 }
@@ -75,6 +79,7 @@ void onDataLoaded(String response) {
       var firstResult = results[0];
       var senses = firstResult["senses"];
       definition = senses[0]["definition"];
+      displayWord = word;
     if(definition == null)
     {
       getWord();
@@ -109,10 +114,15 @@ void save()
  pageNumber++;
  getWord();
  sentence = null;
+ definition = "loading";
 }
 
 void previousPage()
 {
+  if(pageNumber == 1)
+  {
+    return;
+  }
   pageNumber--;
   int index = pageNumber - 1;
   sentence = sentences[index];
