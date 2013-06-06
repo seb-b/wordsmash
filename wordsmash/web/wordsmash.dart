@@ -6,8 +6,6 @@ import 'dart:math';
 
 @observable
 String displayWord = "loading";
-
-String word;
 @observable
 String sentence;
 @observable
@@ -15,10 +13,10 @@ String definition = "loading";
 @observable
 int pageNumber = 1;
 
-//TODO: arrays for pages(could be combined into object/JSON
-List sentences = new List();
-List words = new List();
-List definitions = new List();
+String word;
+String picUrl;
+
+List pages = new List();
 bool newWord = true;
 
 void main() {
@@ -124,23 +122,20 @@ void display(var data)
   var rng = new Random();
   int index = rng.nextInt(results.length);
   var firstResult = results[index];
-  var picUrl = firstResult.unescapedUrl;
+  picUrl = firstResult.unescapedUrl;
   query("#google-pic").src = picUrl;
 }
 
 void save()
 {
- sentences.add(sentence);
- words.add(word);
- definitions.add(definition);
- print(sentences);
- print(words);
- print(definitions);
+ Page page = new Page(sentence, word, definition, picUrl);
+ print(page);
+ pages.add(page);
  pageNumber++;
  getWord();
  sentence = null;
  definition = "loading";
- 
+ query("#google-pic").src = "nothing";
 }
 
 void previousPage()
@@ -151,13 +146,23 @@ void previousPage()
   }
   pageNumber--;
   int index = pageNumber - 1;
-  sentence = sentences[index];
-  sentences.removeAt(index);
-  word = words[index];
-  words.removeAt(index);
-  definition = definitions[index];
-  definitions.removeAt(index);
+  Page page = pages[index];
+  pages.removeAt(index);
+  
+  sentence = page.sentence;
+  word = page.word;
+  definition = page.definition;
+  picUrl = page.picUrl;
+  query("#google-pic").src = picUrl;
   newWord = false;
-  query("#google-pic").src = "";
 }
 
+class Page
+{
+  String sentence;
+  String word;
+  String definition;
+  String picUrl;
+  
+  Page(this.sentence, this.word, this.definition, this.picUrl);
+}
