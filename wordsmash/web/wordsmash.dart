@@ -6,9 +6,12 @@ import 'dart:json';
 String word = "help";
 @observable
 String story;
+@observable
+String definition;
 
 void main() {
-  loadWordDefinition("pig");
+    
+  
 }
 
 void getWord()
@@ -21,6 +24,7 @@ void response(String response)
 {
   Map data = parse(response);
   word = data["word"];
+  loadWordDefinition(word);
 }
 
 void loadWordDefinition(String word) {
@@ -32,5 +36,16 @@ void loadWordDefinition(String word) {
 
 void onDataLoaded(String response) {
   Map data = parse(response);
-  print(data["results"][4]["senses"][0]["definition"]);
+  if(data["results"] == 0)
+  {
+    print("Word not found");
+    getWord();
+    
+  }
+  
+  else
+  {
+    definition = data["results"][4]["senses"][0]["definition"].toString();
+  }
+  
 }
