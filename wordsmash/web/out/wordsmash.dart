@@ -133,6 +133,7 @@ void onDataLoaded(String response) {
     {
       getWord(); 
     }
+   
   }
   
   else
@@ -169,19 +170,21 @@ void newPage()
 
 void getGoogleImage()
 { 
-  js.scoped(() {
-    // create a top-level JavaScript function called myJsonpCallback
-    js.context.myJsonpCallback = new js.Callback.once( (response) {
-      print(response);
-      print(response.responseText);
-    });
 
-    // add a script tag for the api required
-    ScriptElement script = new Element.tag("script");
-    // add the callback function name to the URL
-    script.src = "http://ajax.googleapis.com/ajax/services/search/images?v=1.0&rsz=1&q="+word+"&callback=myJsonpCallback";
-    document.body.children.add(script); // add the script to the DOM
-  });
+  js.context.handler = new js.Callback.once(display);  
+  
+  var script = new ScriptElement();
+  script.src = "http://ajax.googleapis.com/ajax/services/search/images?v=1.0&rsz=1&q="+word+"&callback=handler";
+  document.body.nodes.add(script);
+}
+
+void display(var data)
+{
+  var response = data.responseData;
+  var results = response.results;
+  var firstResult = results[0];
+  var picUrl = firstResult.unescapedUrl;
+  query("#google-pic").src = picUrl;
 }
 
 void save()

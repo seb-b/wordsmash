@@ -2262,3 +2262,129 @@ Total time spent on web/wordsmash.html                       -- 324 ms
 Total time                                                   -- 341 ms
 build.dart finished [513 ms]
 
+---
+build.dart --machine --changed=pubspec.lock --changed=pubspec.yaml --changed=web\wordsmash.dart --changed=web\w...
+Total time spent on web/wordsmash.html                       -- 319 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 337 ms
+build.dart finished [507 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 322 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 340 ms
+build.dart finished [512 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 322 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 340 ms
+build.dart finished [510 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 323 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 343 ms
+build.dart finished [510 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 328 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 346 ms
+build.dart finished [514 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 322 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 340 ms
+build.dart finished [508 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 327 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 345 ms
+build.dart finished [518 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 327 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 346 ms
+build.dart finished [518 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 327 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 347 ms
+build.dart finished [517 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 325 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 344 ms
+build.dart finished [519 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 323 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 343 ms
+build.dart finished [512 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 328 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 346 ms
+build.dart finished [520 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.html
+Total time spent on web/wordsmash.html                       -- 328 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 347 ms
+build.dart finished [518 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.html
+Total time spent on web/wordsmash.html                       -- 329 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 348 ms
+build.dart finished [519 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 329 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 349 ms
+build.dart finished [518 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 329 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 348 ms
+build.dart finished [521 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 323 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 343 ms
+build.dart finished [515 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 327 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 345 ms
+build.dart finished [517 ms]
+
