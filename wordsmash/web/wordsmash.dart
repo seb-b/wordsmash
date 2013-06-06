@@ -4,6 +4,8 @@ import 'dart:json';
 import 'package:js/js.dart' as js;
 
 @observable
+String displayWord = "loading";
+
 String word;
 @observable
 String sentence;
@@ -18,7 +20,6 @@ List words = new List();
 List definitions = new List();
 bool newWord = true;
 
-
 void main() {
   getWord();
 }
@@ -27,8 +28,10 @@ void getWord()
 {
   if(newWord)
   {
-  String url = "http://api.wordnik.com/v4/words.json/randomWord?hasDictionaryDef=false&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&api_key=9426b5f9c67e03853f5410a188e06bc4136900201e3fd92eb";
-  var request = HttpRequest.getString(url).then(response);
+    displayWord = "loading";
+    definition = "loading";
+    String url = "http://api.wordnik.com/v4/words.json/randomWord?hasDictionaryDef=false&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&api_key=9426b5f9c67e03853f5410a188e06bc4136900201e3fd92eb";
+    var request = HttpRequest.getString(url).then(response);
   }
   newWord = true;
 }
@@ -58,7 +61,15 @@ void onDataLoaded(String response) {
   if(data["count"] == 0)
   {
     print("Word not found: " + word);
-    getWord();  
+    int lastIndex = word.lastIndexOf("s");
+    if(lastIndex != -1 && lastIndex == word.length -1)
+    {
+      word = word.substring(0, word.length -1);
+      loadWordDefinition(word);
+    }else
+    {
+      getWord(); 
+    }
   }
   
   else
@@ -69,6 +80,7 @@ void onDataLoaded(String response) {
       var firstResult = results[0];
       var senses = firstResult["senses"];
       definition = senses[0]["definition"];
+      displayWord = word;
     if(definition == null)
     {
       getWord();
@@ -109,12 +121,6 @@ void getGoogleImage()
   });
 }
 
-void processSearchResponse(String response)
-{
-  Map data = parse(response);
-  print(data);
-}
-
 void save()
 {
  sentences.add(sentence);
@@ -126,10 +132,15 @@ void save()
  pageNumber++;
  getWord();
  sentence = null;
+ definition = "loading";
 }
 
 void previousPage()
 {
+  if(pageNumber == 1)
+  {
+    return;
+  }
   pageNumber--;
   int index = pageNumber - 1;
   sentence = sentences[index];
@@ -140,5 +151,4 @@ void previousPage()
   definitions.removeAt(index);
   newWord = false;
 }
-
 
