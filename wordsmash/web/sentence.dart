@@ -13,6 +13,7 @@ String definition = "loading";
 @observable
 int pageNumber = 1;
 
+
 String word;
 String picUrl;
 
@@ -149,6 +150,17 @@ void previousPage()
   picUrl = page.picUrl;
   query("#google-pic").src = picUrl;
   newWord = false;
+}
+
+void generateFullStory()
+{  
+  for(int i = 1; i <= pages.length; i++)
+  {
+    String txtQuery = "#pg"+i.toString()+"-text";
+    String picQuery = "#pg"+i.toString()+"-pic";
+    query(picQuery).src = pages[i-1].picUrl;
+    query(txtQuery).text = pages[i-1].sentence;
+  }
 }
 
 class Page
