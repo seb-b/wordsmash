@@ -1886,3 +1886,141 @@ Total time spent on web/wordsmash.html                       -- 248 ms
 Total time                                                   -- 265 ms
 build.dart finished [436 ms]
 
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 243 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 261 ms
+build.dart finished [434 ms]
+
+---
+build.dart --machine --changed=pubspec.yaml
+Unable to open file: C:/Users/Owner/wordsmash/wordsmash/wordsmash/packages/web_ui/component_build.dart'file:///C:/Users/Owner/wordsmash/wordsmash/wordsmash/build.dart': Error: line 1 pos 1: library handler failed
+import 'package:web_ui/component_build.dart';
+^
+build.dart finished [35 ms]
+
+---
+build.dart --machine --changed=pubspec.lock
+Total time                                                   --  14 ms
+build.dart finished [193 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 324 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 341 ms
+build.dart finished [513 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 323 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 340 ms
+build.dart finished [511 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 324 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 342 ms
+build.dart finished [516 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 321 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 338 ms
+build.dart finished [510 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 322 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 340 ms
+build.dart finished [512 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 327 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 344 ms
+build.dart finished [515 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 321 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 339 ms
+build.dart finished [512 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 323 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 340 ms
+build.dart finished [515 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 321 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 339 ms
+build.dart finished [508 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 323 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 341 ms
+build.dart finished [514 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 325 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 343 ms
+build.dart finished [518 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 320 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 336 ms
+build.dart finished [507 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 322 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 340 ms
+build.dart finished [513 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 322 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 339 ms
+build.dart finished [512 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 322 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 340 ms
+build.dart finished [513 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 323 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 340 ms
+build.dart finished [510 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.dart
+Total time spent on web/wordsmash.html                       -- 326 ms
+[{"method":"mapping","params":{"from":"web/wordsmash.html","to":"web\\out\\wordsmash.html"}}]
+Total time                                                   -- 343 ms
+build.dart finished [513 ms]
+

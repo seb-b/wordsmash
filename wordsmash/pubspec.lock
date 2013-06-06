@@ -21,6 +21,10 @@ packages:
     description: html5lib
     source: hosted
     version: "0.4.3"
+  js:
+    description: js
+    source: hosted
+    version: "0.0.22"
   logging:
     description: logging
     source: hosted

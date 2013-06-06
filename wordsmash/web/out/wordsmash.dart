@@ -10,6 +10,7 @@ import 'package:web_ui/observe/observable.dart' as __observe;
 import 'dart:html';
 import 'package:web_ui/web_ui.dart';
 import 'dart:json';
+import 'package:js/js.dart' as js;
 
 
 // Original code
@@ -154,10 +155,21 @@ void newPage()
   }
 }
 
-void getGoogleImage(String query, int numResults )
-{
-  var url = "http://ajax.googleapis.com/ajax/services/search/images?v=1.0&rsz="+numResults.toString()+"&q="+query;
-  var request = HttpRequest.getString(url).then(processSearchResponse);
+void getGoogleImage()
+{ 
+  js.scoped(() {
+    // create a top-level JavaScript function called myJsonpCallback
+    js.context.myJsonpCallback = new js.Callback.once( (response) {
+      print(response);
+      print(response.responseText);
+    });
+
+    // add a script tag for the api required
+    ScriptElement script = new Element.tag("script");
+    // add the callback function name to the URL
+    script.src = "http://ajax.googleapis.com/ajax/services/search/images?v=1.0&rsz=1&q="+word+"&callback=myJsonpCallback";
+    document.body.children.add(script); // add the script to the DOM
+  });
 }
 
 void processSearchResponse(String response)
