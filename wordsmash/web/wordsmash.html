@@ -10,13 +10,13 @@
     <h1>Wordsmash</h1>
     
     <div id="players-word"> 
-    <p>Your word is: {{word}}</p>
+    <p>Your word is: {{word}}</p> <p>page {{pageNumber}}</p>
     <button on-click="getWord()" id="get-word">new word</button>
     </div>
     
    <br/>
    <textarea placeholder="Write sentence here" bind-value="sentence" > </textarea>
-   
+   <button on-click="previousPage()">Redo last page</button>
    <button on-click="newPage()">New Page</button>
     <span id="new-page-message"></span>   
 
