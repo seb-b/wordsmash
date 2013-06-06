@@ -2,3 +2,4 @@ name: wordsmash
 description: A sample web application
 dependencies:
   browser: any
+  web_ui: any

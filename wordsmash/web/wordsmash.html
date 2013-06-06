@@ -12,9 +12,14 @@
     <p>Hello world from Dart!</p>
     
     <div id="sample_container_id">
-      <p id="sample_text_id"></p>
+      <p id="sample_text_id"></p><br/>
+      
+       
+    <button on-click="getWord()" id="get-word">Get word</button>
+    <div>{{word}}</div>
+    
     </div>
-
+   
     <script type="application/dart" src="wordsmash.dart"></script>
     <script src="packages/browser/dart.js"></script>
   </body>
