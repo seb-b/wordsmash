@@ -9,17 +9,18 @@
   <body>
   <div id="container">
     <h1>Wordsmash</h1>
-    
-    <span id="players-word"> 
-    <p class="page-number">page {{pageNumber}}</p>
-    </span>
-   <br/>
-   <button on-click="previousPage()">Redo last page</button>
-   <p id="sentence">Sentence will go here</p>
-   <button on-click="newPage()">New Page</button>
-    <span id="new-page-message"></span> <br>  
-
    
+   <br/>
+   
+   <h2 id="sentence">The {{adj}} {{noun}} likes to (be) {{verb}}</h2>
+   <h2>Adjective:</h2>
+   <select id="adj-select" bind-value="adj" on-change="wordChanged($event)"></select><br/><span id="adj-def"></span><br>
+   <h2>Noun:</h2>
+   <select id="noun-select" bind-value="noun" on-change="wordChanged($event)"></select><br><span id="noun-def"></span><br>
+   <h2>Verb:</h2>
+   <select id="verb-select" bind-value="verb" on-change="wordChanged($event)"></select><br/><span id="verb-def"></span><br>
+  <br>  
+  
     
     <button id="get-image" on-click="getGoogleImage()">Get an image</button>
   <br/>
