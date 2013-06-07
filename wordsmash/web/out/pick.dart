@@ -19,20 +19,6 @@ import 'dart:math';
 
 final __changes = new __observe.Observable();
 
-String __$displayWord = "loading";
-String get displayWord {
-  if (__observe.observeReads) {
-    __observe.notifyRead(__changes, __observe.ChangeRecord.FIELD, 'displayWord');
-  }
-  return __$displayWord;
-}
-set displayWord(String value) {
-  if (__observe.hasObservers(__changes)) {
-    __observe.notifyChange(__changes, __observe.ChangeRecord.FIELD, 'displayWord',
-        __$displayWord, value);
-  }
-  __$displayWord = value;
-}
 String __$sentence;
 String get sentence {
   if (__observe.observeReads) {
@@ -47,125 +33,185 @@ set sentence(String value) {
   }
   __$sentence = value;
 }
-String __$definition = "loading";
-String get definition {
-  if (__observe.observeReads) {
-    __observe.notifyRead(__changes, __observe.ChangeRecord.FIELD, 'definition');
-  }
-  return __$definition;
-}
-set definition(String value) {
-  if (__observe.hasObservers(__changes)) {
-    __observe.notifyChange(__changes, __observe.ChangeRecord.FIELD, 'definition',
-        __$definition, value);
-  }
-  __$definition = value;
-}
-int __$pageNumber = 1;
-int get pageNumber {
-  if (__observe.observeReads) {
-    __observe.notifyRead(__changes, __observe.ChangeRecord.FIELD, 'pageNumber');
-  }
-  return __$pageNumber;
-}
-set pageNumber(int value) {
-  if (__observe.hasObservers(__changes)) {
-    __observe.notifyChange(__changes, __observe.ChangeRecord.FIELD, 'pageNumber',
-        __$pageNumber, value);
-  }
-  __$pageNumber = value;
-}
 
-String word;
-String picUrl;
+//TODO: these can be local
+List<OptionElement> nouns = new List();
+List<OptionElement> verbs = new List();
+List<OptionElement> adjectives = new List();
+
+String __$noun;
+String get noun {
+  if (__observe.observeReads) {
+    __observe.notifyRead(__changes, __observe.ChangeRecord.FIELD, 'noun');
+  }
+  return __$noun;
+}
+set noun(String value) {
+  if (__observe.hasObservers(__changes)) {
+    __observe.notifyChange(__changes, __observe.ChangeRecord.FIELD, 'noun',
+        __$noun, value);
+  }
+  __$noun = value;
+}
+String __$verb;
+String get verb {
+  if (__observe.observeReads) {
+    __observe.notifyRead(__changes, __observe.ChangeRecord.FIELD, 'verb');
+  }
+  return __$verb;
+}
+set verb(String value) {
+  if (__observe.hasObservers(__changes)) {
+    __observe.notifyChange(__changes, __observe.ChangeRecord.FIELD, 'verb',
+        __$verb, value);
+  }
+  __$verb = value;
+}
+String __$adj;
+String get adj {
+  if (__observe.observeReads) {
+    __observe.notifyRead(__changes, __observe.ChangeRecord.FIELD, 'adj');
+  }
+  return __$adj;
+}
+set adj(String value) {
+  if (__observe.hasObservers(__changes)) {
+    __observe.notifyChange(__changes, __observe.ChangeRecord.FIELD, 'adj',
+        __$adj, value);
+  }
+  __$adj = value;
+}
 
 List pages = new List();
-bool newWord = true;
+
 
 void main() {
-  getWord();
+  getNouns();
+  getVerbs();
+  getAdjectives();
 }
 
-void getWord()
+void getNouns()
 {
-  if(newWord)
-  {
-    displayWord = "loading";
-    definition = "loading";
-    String url = "http://api.wordnik.com/v4/words.json/randomWord?hasDictionaryDef=false&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&api_key=9426b5f9c67e03853f5410a188e06bc4136900201e3fd92eb";
-    var request = HttpRequest.getString(url).then(response);
-  }
-  newWord = true;
+  String url = "http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&includePartOfSpeech=noun&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=3&maxLength=-1&limit=10&api_key=9426b5f9c67e03853f5410a188e06bc4136900201e3fd92eb";
+  var request = HttpRequest.getString(url).then(nounResponse);
+
 }
 
-void getPropernoun()
+void nounResponse(String response)
 {
-  String url = "http://api.wordnik.com/v4/words.json/randomWord?hasDictionaryDef=false&includePartOfSpeech=proper-noun&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&api_key=9426b5f9c67e03853f5410a188e06bc4136900201e3fd92eb";
-  var request = HttpRequest.getString(url).then(response);
+  List data = parse(response);
+  for(Map word in data)
+  {
+    nouns.add(new OptionElement(word["word"], word["word"], false, true));
+  }
+  query("#noun-select").children.addAll(nouns);
 }
 
-void response(String response)
+void getVerbs()
 {
-  Map data = parse(response);
-  word = data["word"];
-  loadWordDefinition(word);
+  String url = "http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&includePartOfSpeech=verb&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=3&maxLength=-1&limit=10&api_key=9426b5f9c67e03853f5410a188e06bc4136900201e3fd92eb";
+  var request = HttpRequest.getString(url).then(verbResponse);
 }
 
-void loadWordDefinition(String word) {
-  var url = "http://api.pearson.com/v2/dictionaries/entries?headword="+word+"&apikey=9b7305c0523c3902ec01b44e5a5c53ad";
-
-  // call the web server asynchronously
-  var request = HttpRequest.getString(url).then(onDataLoaded);
-}
-
-void onDataLoaded(String response) {
-  Map data = parse(response);
-  if(data["count"] == 0)
-  {
-    print("Word not found: " + word);
-    int lastIndex = word.lastIndexOf("s");
-    if(lastIndex != -1 && lastIndex == word.length -1)
-    {
-      word = word.substring(0, word.length -1);
-      loadWordDefinition(word);
-    }else
-    {
-      getWord(); 
-    }
-   
-  }
-  
-  else
-  {
-    //TODO: multiple definitions, other info
-    try{
-      List results = data["results"];
-      var firstResult = results[0];
-      var senses = firstResult["senses"];
-      definition = senses[0]["definition"];
-      displayWord = word;
-      print("found a def for: " + word);
-    if(definition == null)
-    {
-      getWord();
-    }
-    } catch(e)
-    {
-      getWord();
-    }
-    
-  }
-}
-void newPage()
+void verbResponse(String response)
 {
-  if(sentence != null && sentence.indexOf(word) != -1)
+  List data = parse(response);
+  for(Map word in data)
   {
-    query("#new-page-message").text = "";
-    save();
-  }else
-  {
-    query("#new-page-message").text = "You didn't use your word, dingus";
+    verbs.add(new OptionElement(word["word"], word["word"], false, true));
   }
+  query("#verb-select").children.addAll(verbs);
+}
+
+void getAdjectives()
+{
+  String url = "http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&includePartOfSpeech=adjective&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=3&maxLength=-1&limit=10&api_key=9426b5f9c67e03853f5410a188e06bc4136900201e3fd92eb";
+  var request = HttpRequest.getString(url).then(adjectiveResponse);
+}
+
+void adjectiveResponse(String response)
+{
+  List data = parse(response);
+  for(Map word in data)
+  {
+    adjectives.add(new OptionElement(word["word"], word["word"], false, true));
+  }
+  query("#adj-select").children.addAll(adjectives);
+  updateAllDefs();
+}
+
+void updateAllDefs()
+{
+  if(noun == null)
+  {
+    noun = query("#noun-select").value;
+  }
+  if(verb == null)
+  {
+    verb = query("#verb-select").value;
+  }
+  if(adj == null)
+  {
+    adj = query("#adj-select").value;
+  }
+  getNounDef(noun);
+  getVerbDef(verb);
+  getAdjDef(adj);
+}
+
+void wordChanged(Event e)
+{
+  String whoChanged = e.target.id;
+  String value = query("#" + whoChanged).value;
+  if(whoChanged.indexOf("noun") != -1)
+  {
+    getNounDef(value);
+  }
+  if(whoChanged.indexOf("verb") != -1)
+  {
+    getVerbDef(value);
+  }
+  if(whoChanged.indexOf("adj") != -1)
+  {
+    getAdjDef(value);
+  }
+}
+
+void getNounDef(String word)
+{
+  String url = "http://api.wordnik.com/v4/word.json/"+word+"/definitions?limit=1&includeRelated=true&partOfSpeech=noun&useCanonical=false&includeTags=false&api_key=9426b5f9c67e03853f5410a188e06bc4136900201e3fd92eb";
+  var request = HttpRequest.getString(url).then(nounDef);
+}
+
+void nounDef(String response)
+{
+  Map fullDef = parse(response)[0];
+  query("#noun-def").text = fullDef["text"];
+}
+
+void getVerbDef(String word)
+{
+  String url = "http://api.wordnik.com/v4/word.json/"+word+"/definitions?limit=1&includeRelated=true&partOfSpeech=verb&useCanonical=false&includeTags=false&api_key=9426b5f9c67e03853f5410a188e06bc4136900201e3fd92eb";
+  var request = HttpRequest.getString(url).then(verbDef);
+}
+
+void verbDef(String response)
+{
+  Map fullDef = parse(response)[0];
+  query("#verb-def").text = fullDef["text"];
+}
+
+void getAdjDef(String word)
+{
+  String url = "http://api.wordnik.com/v4/word.json/"+word+"/definitions?limit=1&includeRelated=true&partOfSpeech=adjective&useCanonical=false&includeTags=false&api_key=9426b5f9c67e03853f5410a188e06bc4136900201e3fd92eb";
+  var request = HttpRequest.getString(url).then(adjDef);
+}
+
+void adjDef(String response)
+{
+  Map fullDef = parse(response)[0];
+  query("#adj-def").text = fullDef["text"];
 }
 
 void getGoogleImage()
@@ -174,7 +220,8 @@ void getGoogleImage()
   js.context.handler = new js.Callback.once(display);  
   
   var script = new ScriptElement();
-  script.src = "http://ajax.googleapis.com/ajax/services/search/images?v=1.0&rsz=8&q="+word+"&callback=handler";
+  var sentence = query("#sentence").text;
+  script.src = "http://ajax.googleapis.com/ajax/services/search/images?v=1.0&rsz=8&q="+sentence+"&callback=handler";
   document.body.nodes.add(script);
 }
 
@@ -182,69 +229,46 @@ void display(var data)
 {
   var response = data.responseData;
   var results = response.results;
-  var rng = new Random();
-  int index = rng.nextInt(results.length);
-  var firstResult = results[index];
-  picUrl = firstResult.unescapedUrl;
-  query("#google-pic").src = picUrl;
-}
-
-void save()
-{
- Page page = new Page(sentence, word, definition, picUrl);
- print(page);
- pages.add(page);
- pageNumber++;
- getWord();
- sentence = null;
- definition = "loading";
- query("#google-pic").src = "nothing";
-}
-
-void previousPage()
-{
-  if(pageNumber == 1)
+  if(results.length == 0)
   {
     return;
   }
-  pageNumber--;
-  int index = pageNumber - 1;
-  Page page = pages[index];
-  pages.removeAt(index);
-  
-  sentence = page.sentence;
-  word = page.word;
-  definition = page.definition;
-  picUrl = page.picUrl;
-  query("#google-pic").src = picUrl;
-  newWord = false;
+  var rng = new Random();
+  int index = rng.nextInt(results.length);
+  var firstResult = results[index];
+  query("#google-pic").src = firstResult.unescapedUrl;
 }
 
-class Page
-{
-  String sentence;
-  String word;
-  String definition;
-  String picUrl;
-  
-  Page(this.sentence, this.word, this.definition, this.picUrl);
-}
 
 // Additional generated code
 void init_autogenerated() {
   var __root = autogenerated.document.body;
-  var __e1, __e2, __e3, __e4;
+  var __e3, __e4, __e5, __e6, __e7;
   var __t = new autogenerated.Template(__root);
-  __e1 = __root.nodes[1].nodes[3].nodes[1];
-  var __binding0 = __t.contentBind(() => pageNumber, false);
-  __e1.nodes.addAll([new autogenerated.Text('page '),
-      __binding0]);
-  __e2 = __root.nodes[1].nodes[7];
-  __t.listen(__e2.onClick, ($event) { previousPage(); });
-  __e3 = __root.nodes[1].nodes[11];
-  __t.listen(__e3.onClick, ($event) { newPage(); });
-  __e4 = __root.nodes[1].nodes[17];
-  __t.listen(__e4.onClick, ($event) { getGoogleImage(); });
+  __e3 = __root.nodes[1].nodes[5];
+  var __binding0 = __t.contentBind(() => adj, false);
+  var __binding1 = __t.contentBind(() => noun, false);
+  var __binding2 = __t.contentBind(() => verb, false);
+  __e3.nodes.addAll([new autogenerated.Text('The '),
+      __binding0,
+      new autogenerated.Text(' '),
+      __binding1,
+      new autogenerated.Text(' likes to (be) '),
+      __binding2]);
+  __e4 = __root.nodes[1].nodes[9];
+  __t.listen(__e4.onChange, ($event) { adj = __e4.value; });
+  __t.listen(__e4.onChange, ($event) { wordChanged($event); });
+  __t.oneWayBind(() => adj, (e) { if (__e4.value != e) __e4.value = e; }, false, false);
+  __e5 = __root.nodes[1].nodes[16];
+  __t.listen(__e5.onChange, ($event) { noun = __e5.value; });
+  __t.listen(__e5.onChange, ($event) { wordChanged($event); });
+  __t.oneWayBind(() => noun, (e) { if (__e5.value != e) __e5.value = e; }, false, false);
+  __e6 = __root.nodes[1].nodes[23];
+  __t.listen(__e6.onChange, ($event) { verb = __e6.value; });
+  __t.listen(__e6.onChange, ($event) { wordChanged($event); });
+  __t.oneWayBind(() => verb, (e) { if (__e6.value != e) __e6.value = e; }, false, false);
+  __e7 = __root.nodes[1].nodes[30];
+  __t.listen(__e7.onClick, ($event) { getGoogleImage(); });
   __t.create();
   __t.insert();
 }
