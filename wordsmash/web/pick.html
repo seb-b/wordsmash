@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <title>Wordsmash</title>
     <link rel="stylesheet" href="wordsmash.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
   </head>
   <body>
   <div id="container">
-    <h1>Wordsmash</h1>
-   
-   <br/>
-   
+   <div class="hero-unit">
+     <h1>Wordsmash</h1>
    <h2 id="sentence">The {{adj}} {{noun}} likes to (be) {{verb}}</h2>
+   </div>
    <h2>Adjective:</h2>
    <select id="adj-select" bind-value="adj" on-change="wordChanged($event)"></select><br/><span id="adj-def"></span><br>
    <h2>Noun:</h2>
@@ -22,9 +22,9 @@
   <br>  
   
     
-    <button id="get-image" on-click="getGoogleImage()">Get an image</button>
+    <button id="get-image" on-click="getGoogleImage()" class="btn">Get an image</button>
   <br/>
-   <img id="google-pic" />
+   <img id="google-pic"class="img-polaroid" />
    </div>
    
     <script type="application/dart" src="pick.dart"></script>
