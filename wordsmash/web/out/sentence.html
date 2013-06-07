@@ -4,35 +4,37 @@
     <meta charset="utf-8">
     <title>Wordsmash</title>
     <link rel="stylesheet" href="../wordsmash.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="resources/js/turn.js"></script>
   </head>
   <body>
   <div id="container">
-    <h1>Wordsmash</h1>
+    <div class="hero-unit">
+    <h2>Wordsmash</h2>
     
     <span id="players-word"> 
     <p></p> 
-    <button id="get-word">new word</button>
+    <button class="btn" id="get-word">New Word</button>
     <p class="page-number"></p>
     </span>
      <div id="word-definition"></div>
-   <br>
-   <button>Redo last page</button>
+   </div>
+   <button class="btn">Redo last page</button>
    <textarea placeholder="Write sentence here" id="sentence-textarea"> </textarea>
-   <button>New page</button>
+   <button class="btn">New page</button>
     <span id="new-page-message"></span> <br>  
 
    
     
-    <button id="get-image">Get an image</button>
+    <button class="btn" id="get-image">Get an image</button>
   <br>
    <div id="google-pic-container">
-   <img id="google-pic">
+   <img id="google-pic" class="img-polaroid">
    </div>
    </div>
    
-      <button>Generate full story</button>
+      <button class="btn">Generate full story</button>
    
    <div id="picbook">
       <div class="hard"> <img src="resources/images/cover.png"></div>

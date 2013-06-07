@@ -5,35 +5,37 @@
     <meta charset="utf-8">
     <title>Wordsmash</title>
     <link rel="stylesheet" href="wordsmash.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="out/resources/js/turn.js"></script>
   </head>
   <body>
   <div id="container">
-    <h1>Wordsmash</h1>
+    <div class="hero-unit">
+    <h2>Wordsmash</h2>
     
     <span id="players-word"> 
     <p>Your word is: {{displayWord}}</p> 
-    <button on-click="getWord()" id="get-word">new word</button>
+    <button class="btn" on-click="getWord()" id="get-word">New Word</button>
     <p class="page-number">page {{pageNumber}}</p>
     </span>
      <div id="word-definition">{{definition}}</div>
-   <br/>
-   <button on-click="previousPage()">Redo last page</button>
+   </div>
+   <button class="btn" on-click="previousPage()">Redo last page</button>
    <textarea placeholder="Write sentence here" bind-value="sentence" id="sentence-textarea" > </textarea>
-   <button on-click="newPage()">New page</button>
+   <button class="btn" on-click="newPage()">New page</button>
     <span id="new-page-message"></span> <br>  
 
    
     
-    <button id="get-image" on-click="getGoogleImage()">Get an image</button>
+    <button class="btn" id="get-image" on-click="getGoogleImage()">Get an image</button>
   <br/>
    <div id="google-pic-container">
-   <img id="google-pic" />
+   <img id="google-pic" class="img-polaroid"/>
    </div>
    </div>
    
-      <button on-click="generateFullStory()">Generate full story</button>
+      <button class="btn" on-click="generateFullStory()">Generate full story</button>
    
    <div id="picbook">
       <div class="hard"> <img src="out/resources/images/cover.png" /></div>
