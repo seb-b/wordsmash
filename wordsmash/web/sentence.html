@@ -21,20 +21,22 @@
    <br/>
    <button on-click="previousPage()">Redo last page</button>
    <textarea placeholder="Write sentence here" bind-value="sentence" id="sentence-textarea" > </textarea>
-   <button on-click="newPage()">New Page</button>
+   <button on-click="newPage()">New page</button>
     <span id="new-page-message"></span> <br>  
 
    
     
     <button id="get-image" on-click="getGoogleImage()">Get an image</button>
   <br/>
+   <div id="google-pic-container">
    <img id="google-pic" />
+   </div>
    </div>
    
       <button on-click="generateFullStory()">Generate full story</button>
    
    <div id="picbook">
-      <div class="hard"> Turn.js </div>
+      <div class="hard"> <img src="out/resources/images/cover.png" /></div>
       <div class="hard"></div>
       <div>
         <p id="pg1-text" class = "book-text"></p>
@@ -67,8 +69,9 @@
               acceleration: true,
               gradients: !$.isTouch,
               elevation:50,
-              width: 400,
-              height: 300,
+              width: 1000,
+              height: 800,
+              autoCenter: true,
               when: {
                 turned: function(e, page) {
                   /*console.log('Current view: ', $(this).turn('view'));*/
