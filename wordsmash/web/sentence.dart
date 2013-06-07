@@ -154,6 +154,8 @@ void previousPage()
 
 void generateFullStory()
 {  
+  save();
+  query("#story-builder").remove();
   for(int i = 1; i <= pages.length; i++)
   {
     String txtQuery = "#pg"+i.toString()+"-text";

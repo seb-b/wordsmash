@@ -10,7 +10,7 @@
   <body>
   <div id="container">
     <h1>Wordsmash</h1>
-    
+    <div id="story-builder">
     <span id="players-word"> 
     <p></p> 
     <button id="get-word">new word</button>
@@ -30,32 +30,32 @@
    <div id="google-pic-container">
    <img id="google-pic">
    </div>
-   </div>
    
       <button>Generate full story</button>
-   
+   </div>
+    </div>
    <div id="picbook">
       <div class="hard"> <img src="resources/images/cover.png"></div>
       <div class="hard"></div>
-      <div>
-        <p id="pg1-text" class="book-text"></p>
+      <div class="page">
         <img id="pg1-pic" class="book-pic">
+        <p id="pg1-text" class="book-text"></p>
       </div>
-      <div>
-        <p id="pg2-text" class="book-text"></p>
+      <div class="page">
         <img id="pg2-pic" class="book-pic">
+        <p id="pg2-text" class="book-text"></p>
       </div>
-      <div>
-        <p id="pg3-text" class="book-text"></p>
+      <div class="page">
         <img id="pg3-pic" class="book-pic">
+        <p id="pg3-text" class="book-text"></p>
       </div>
-      <div>
-        <p id="pg4-text" class="book-text"></p>
+      <div class="page">
         <img id="pg4-pic" class="book-pic">
+        <p id="pg4-text" class="book-text"></p>
       </div>
-      <div>
-        <p id="pg5-text" class="book-text"></p>
+      <div class="page">
         <img id="pg5-pic" class="book-pic">
+        <p id="pg5-text" class="book-text"></p>
       </div>
       <div class="hard"></div>
       <div class="hard"></div>
@@ -70,7 +70,7 @@
               elevation:50,
               width: 1000,
               height: 800,
-              autoCenter: true,
+              autoCenter: false,
               when: {
                 turned: function(e, page) {
                   /*console.log('Current view: ', $(this).turn('view'));*/

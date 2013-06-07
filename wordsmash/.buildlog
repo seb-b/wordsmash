@@ -6084,3 +6084,181 @@ build.dart --machine --changed=web\wordsmash.css
 Total time                                                   --  14 ms
 build.dart finished [192 ms]
 
+---
+build.dart --machine --changed=web\pick.dart --changed=web\pick.html
+Total time spent on web/sentence.html                        -- 358 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  17 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+Total time spent on web/pick.html                            --  83 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 475 ms
+build.dart finished [745 ms]
+
+---
+build.dart --machine --changed=web\sentence.html
+[{"method":"warning","params":{"file":"web/sentence.html","message":"Unexpected character after attribute value.","line":14,"charStart":377,"charEnd":416}}]
+[{"method":"warning","params":{"file":"web/sentence.html","message":"Invalid character in attribute name","line":14,"charStart":377,"charEnd":428}}]
+[{"method":"warning","params":{"file":"web/sentence.html","message":"Unexpected end tag (span). Ignored.","line":19,"charStart":593,"charEnd":600}}]
+Total time spent on web/sentence.html                        -- 364 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  25 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+Total time spent on web/pick.html                            --  69 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 476 ms
+build.dart finished [645 ms]
+
+---
+build.dart --machine --changed=web\sentence.html
+Total time spent on web/sentence.html                        -- 361 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  16 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+Total time spent on web/pick.html                            --  82 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 477 ms
+build.dart finished [646 ms]
+
+---
+build.dart --machine --changed=web\sentence.dart
+Total time spent on web/sentence.html                        -- 357 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  16 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+Total time spent on web/pick.html                            --  81 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 472 ms
+build.dart finished [647 ms]
+
+---
+build.dart --machine --changed=web\sentence.html
+Total time spent on web/sentence.html                        -- 373 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  18 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+Total time spent on web/pick.html                            --  83 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 493 ms
+build.dart finished [675 ms]
+
+---
+build.dart --machine --changed=web\sentence.dart
+Total time spent on web/sentence.html                        -- 363 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  17 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+Total time spent on web/pick.html                            --  82 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 479 ms
+build.dart finished [653 ms]
+
+---
+build.dart --machine --changed=web\sentence.html
+Total time spent on web/sentence.html                        -- 360 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  16 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+Total time spent on web/pick.html                            --  81 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 475 ms
+build.dart finished [649 ms]
+
+---
+build.dart --machine --changed=web\sentence.html
+Total time spent on web/sentence.html                        -- 361 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  16 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+Total time spent on web/pick.html                            --  81 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 476 ms
+build.dart finished [654 ms]
+
+---
+build.dart --machine --changed=web\sentence.html
+Total time spent on web/sentence.html                        -- 364 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  16 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+Total time spent on web/pick.html                            --  84 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 483 ms
+build.dart finished [655 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.css
+Total time                                                   --  14 ms
+build.dart finished [190 ms]
+
+---
+build.dart --machine --changed=web\sentence.html
+Total time spent on web/sentence.html                        -- 370 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  28 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+Total time spent on web/pick.html                            --  73 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 491 ms
+build.dart finished [685 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.css
+Total time                                                   --  13 ms
+build.dart finished [186 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.css
+Total time                                                   --  13 ms
+build.dart finished [182 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.css
+Total time                                                   --  14 ms
+build.dart finished [183 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.css
+Total time                                                   --  14 ms
+build.dart finished [187 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.css
+Total time                                                   --  14 ms
+build.dart finished [189 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.css
+Total time                                                   --  14 ms
+build.dart finished [190 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.css
+Total time                                                   --  14 ms
+build.dart finished [187 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.css
+Total time                                                   --  14 ms
+build.dart finished [185 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.css
+Total time                                                   --  14 ms
+build.dart finished [194 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.css
+Total time                                                   --  14 ms
+build.dart finished [189 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.css
+Total time                                                   --  14 ms
+build.dart finished [190 ms]
+
+---
+build.dart --machine --changed=web\wordsmash.css
+Total time                                                   --  13 ms
+build.dart finished [185 ms]
+
