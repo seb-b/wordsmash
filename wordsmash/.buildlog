@@ -6973,3 +6973,171 @@ Total time spent on web/pick.html                            -- 202 ms
 Total time                                                   -- 863 ms
 build.dart finished [1056 ms]
 
+---
+build.dart --machine --changed=web\pick.dart
+Total time spent on web/sentence.html                        -- 636 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  33 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+[{"method":"warning","params":{"file":"web/pick.html","message":"Unexpected character after attribute value.","line":32,"charStart":1295,"charEnd":1316}}]
+Total time spent on web/pick.html                            -- 207 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 894 ms
+build.dart finished [1092 ms]
+
+---
+build.dart --machine --changed=web\pick.dart
+Total time spent on web/sentence.html                        -- 671 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  33 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+[{"method":"warning","params":{"file":"web/pick.html","message":"Unexpected character after attribute value.","line":32,"charStart":1295,"charEnd":1316}}]
+Total time spent on web/pick.html                            -- 205 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 929 ms
+build.dart finished [1114 ms]
+
+---
+build.dart --machine --changed=web\pick.dart
+Total time spent on web/sentence.html                        -- 616 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  33 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+[{"method":"warning","params":{"file":"web/pick.html","message":"Unexpected character after attribute value.","line":32,"charStart":1295,"charEnd":1316}}]
+Total time spent on web/pick.html                            -- 222 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 888 ms
+build.dart finished [1082 ms]
+
+---
+build.dart --machine --changed=web\pick.html
+Total time spent on web/sentence.html                        -- 614 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  33 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+[{"method":"warning","params":{"file":"web/pick.html","message":"Unexpected character after attribute value.","line":32,"charStart":1362,"charEnd":1383}}]
+Total time spent on web/pick.html                            -- 215 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 880 ms
+build.dart finished [1070 ms]
+
+---
+build.dart --machine --changed=web\pick.dart
+Total time spent on web/sentence.html                        -- 616 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  33 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+[{"method":"warning","params":{"file":"web/pick.html","message":"Unexpected character after attribute value.","line":32,"charStart":1362,"charEnd":1383}}]
+Total time spent on web/pick.html                            -- 203 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 870 ms
+build.dart finished [1082 ms]
+
+---
+build.dart --machine --changed=web\pick.dart
+Total time spent on web/sentence.html                        -- 617 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  36 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+[{"method":"warning","params":{"file":"web/pick.html","message":"Unexpected character after attribute value.","line":32,"charStart":1362,"charEnd":1383}}]
+Total time spent on web/pick.html                            -- 211 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 882 ms
+build.dart finished [1074 ms]
+
+---
+build.dart --machine --changed=web\pick.dart
+Total time spent on web/sentence.html                        -- 611 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  33 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+[{"method":"warning","params":{"file":"web/pick.html","message":"Unexpected character after attribute value.","line":32,"charStart":1362,"charEnd":1383}}]
+Total time spent on web/pick.html                            -- 204 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 868 ms
+build.dart finished [1053 ms]
+
+---
+build.dart --machine --changed=web\pick.dart
+Total time spent on web/sentence.html                        -- 615 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  33 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+[{"method":"warning","params":{"file":"web/pick.html","message":"Unexpected character after attribute value.","line":32,"charStart":1362,"charEnd":1383}}]
+Total time spent on web/pick.html                            -- 201 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 867 ms
+build.dart finished [1060 ms]
+
+---
+build.dart --machine --changed=web\pick.dart
+Total time spent on web/sentence.html                        -- 616 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  32 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+[{"method":"warning","params":{"file":"web/pick.html","message":"Unexpected character after attribute value.","line":32,"charStart":1362,"charEnd":1383}}]
+Total time spent on web/pick.html                            -- 208 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 875 ms
+build.dart finished [1086 ms]
+
+---
+build.dart --machine --changed=web\pick.dart
+Total time spent on web/sentence.html                        -- 618 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  34 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+[{"method":"warning","params":{"file":"web/pick.html","message":"Unexpected character after attribute value.","line":32,"charStart":1362,"charEnd":1383}}]
+Total time spent on web/pick.html                            -- 201 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 871 ms
+build.dart finished [1071 ms]
+
+---
+build.dart --machine --changed=web\pick.dart
+Total time spent on web/sentence.html                        -- 614 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  32 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+[{"method":"warning","params":{"file":"web/pick.html","message":"Unexpected character after attribute value.","line":32,"charStart":1362,"charEnd":1383}}]
+Total time spent on web/pick.html                            -- 202 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 866 ms
+build.dart finished [1064 ms]
+
+---
+build.dart --machine --changed=web\pick.dart
+Total time spent on web/sentence.html                        -- 620 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  34 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+[{"method":"warning","params":{"file":"web/pick.html","message":"Unexpected character after attribute value.","line":32,"charStart":1362,"charEnd":1383}}]
+Total time spent on web/pick.html                            -- 205 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 878 ms
+build.dart finished [1068 ms]
+
+---
+build.dart --machine --changed=web\pick.dart
+Total time spent on web/sentence.html                        -- 616 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  33 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+[{"method":"warning","params":{"file":"web/pick.html","message":"Unexpected character after attribute value.","line":32,"charStart":1362,"charEnd":1383}}]
+Total time spent on web/pick.html                            -- 203 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 871 ms
+build.dart finished [1065 ms]
+
+---
+build.dart --machine --changed=web\pick.dart
+Total time spent on web/sentence.html                        -- 662 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  38 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+[{"method":"warning","params":{"file":"web/pick.html","message":"Unexpected character after attribute value.","line":32,"charStart":1362,"charEnd":1383}}]
+Total time spent on web/pick.html                            -- 222 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 941 ms
+build.dart finished [1135 ms]
+

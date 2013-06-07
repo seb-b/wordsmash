@@ -33,6 +33,9 @@ void refreshWordLists()
   noun = null;
   verb = null;
   adj = null;
+  nouns.clear();
+  verbs.clear();
+  adjectives.clear();
   getNouns();
   getVerbs();
   getAdjectives();
@@ -40,10 +43,11 @@ void refreshWordLists()
 
 void pickSentence()
 {
-  query("#sentece-" + sentenceIndex).$dom_className = "hide";
+  query("#sentence-" + sentenceIndex.toString()).$dom_className = "hide";
   Random rng = new Random();
   int newIndex = rng.nextInt(3);
-  query("#sentece-" + sentenceIndex).$dom_className = "nothing";
+  sentenceIndex = newIndex;
+  query("#sentence-" + sentenceIndex.toString()).$dom_className = "nothing";
 }
 
 void getNouns()
@@ -175,7 +179,7 @@ void getGoogleImage()
   js.context.handler = new js.Callback.once(display);  
   
   var script = new ScriptElement();
-  var sentence = query("#sentence").text;
+  var sentence = query("#sentence-" + sentenceIndex.toString()).text;
   script.src = "http://ajax.googleapis.com/ajax/services/search/images?v=1.0&rsz=8&q="+sentence+"&callback=handler";
   document.body.nodes.add(script);
 }
