@@ -19,13 +19,31 @@ String verb;
 @observable
 String adj;
 
+int sentenceIndex = 0;
 List pages = new List();
 
 
 void main() {
+  refreshWordLists();
+  pickSentence();
+}
+
+void refreshWordLists()
+{
+  noun = null;
+  verb = null;
+  adj = null;
   getNouns();
   getVerbs();
   getAdjectives();
+}
+
+void pickSentence()
+{
+  query("#sentece-" + sentenceIndex).$dom_className = "hide";
+  Random rng = new Random();
+  int newIndex = rng.nextInt(3);
+  query("#sentece-" + sentenceIndex).$dom_className = "nothing";
 }
 
 void getNouns()

@@ -11,7 +11,12 @@
   <div id="container">
    <div class="hero-unit">
      <h1>Wordsmash</h1>
-   <h2 id="sentence">The {{adj}} {{noun}} likes to (be) {{verb}}</h2>
+   <h2 id="sentence-1" class="hide">The {{adj}} {{noun}} likes to (be) {{verb}}</h2>
+   <h2 id="sentence-2" class="hide">A {{noun}} is something that can {{verb}} {{adj}}</h2>
+   <h2 id="sentence-3" class="hide">The {{adj}} man hates using his {{noun}} to {{verb}}</h2>
+   <h2 id="sentence-0" class="hide">If you (are) {{verb}} while you are {{adj}} you'll end up a {{noun}}</h2>
+   
+   <button class="btn" on-click="refreshWordLists()">New words!</button>
    </div>
    <h2>Adjective:</h2>
    <select id="adj-select" bind-value="adj" on-change="wordChanged($event)"></select><br/><span id="adj-def"></span><br>
