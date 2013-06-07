@@ -155,7 +155,9 @@ void previousPage()
 void generateFullStory()
 {  
   save();
+  query("#picbook").$dom_removeAttribute("class");
   query("#story-builder").remove();
+  print(pages.length);
   for(int i = 1; i <= pages.length; i++)
   {
     String txtQuery = "#pg"+i.toString()+"-text";

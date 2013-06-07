@@ -28,7 +28,7 @@ h1, p {
   float: right;
 }
 #sentence-textarea {
-  width: 75%;
+  width: 65%;
   height: 75px;
 }
 #google-pic-container {
@@ -55,5 +55,8 @@ h1, p {
   font-size: 50px;
   text-align: center;
   line-height: 60px;
+}
+.hide {
+  display: none;
 }
 
