@@ -7162,3 +7162,15 @@ Total time spent on web/pick.html                            -- 203 ms
 Total time                                                   -- 880 ms
 build.dart finished [1060 ms]
 
+---
+build.dart --machine --changed=web\sentence.html
+Total time spent on web/sentence.html                        -- 630 ms
+[{"method":"mapping","params":{"from":"web/sentence.html","to":"web\\out\\sentence.html"}}]
+Total time spent on web/index.html                           --  38 ms
+[{"method":"mapping","params":{"from":"web/index.html","to":"web\\out\\index.html"}}]
+[{"method":"warning","params":{"file":"web/pick.html","message":"Unexpected character after attribute value.","line":32,"charStart":1295,"charEnd":1316}}]
+Total time spent on web/pick.html                            -- 208 ms
+[{"method":"mapping","params":{"from":"web/pick.html","to":"web\\out\\pick.html"}}]
+Total time                                                   -- 893 ms
+build.dart finished [1069 ms]
+
